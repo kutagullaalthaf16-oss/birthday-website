@@ -7,7 +7,7 @@ import BirthdayScene from "./scenes/BirthdayScene";
 import BalloonScene from "./scenes/BalloonScene";
 import LetterScene from "./scenes/LetterScene";
 import BackgroundMusic from "./components/BackgroundMusic";
-
+import { Analytics } from "@vercel/analytics/react";
 export default function App() {
   const [scene, setScene] = useState("loading");
 
@@ -33,6 +33,7 @@ export default function App() {
           <LetterScene />
         </>
       )}
+      <Analytics />
     </div>
   );
 }
